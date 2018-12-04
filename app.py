@@ -1,11 +1,13 @@
 import mysql.connector
+from config import config
 from mysql.connector import errorcode
 
+print(config)
 conn = mysql.connector.connect(
-    host = 'localhost',
-    user = 'root',
-    password = 'carmine',
-    database = 'flux'
+    host= config['host'],
+    user= config['user'],
+    password= config['password'],
+    database= config['database']
 )
 
 print('Connection successful')
